@@ -1,0 +1,21 @@
+_BASE_: Base-DiffusionDet.yaml
+MODEL:
+  WEIGHTS: models/torchvision-R-101.pkl
+  RESNETS:
+    DEPTH: 101
+    STRIDE_IN_1X1: false
+  DiffusionDet:
+    NUM_CLASSES: 6
+    NUM_PROPOSALS: 500
+DATASETS:
+  TRAIN: ("newdata_train",)
+  TEST: ("newdata_train",)
+SOLVER:
+  MAX_ITER: 360
+  IMS_PER_BATCH: 4
+  STEPS: (800,1000)
+INPUT:
+  CROP:
+    ENABLED: true
+  FORMAT: RGB
+

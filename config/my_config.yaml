@@ -1,0 +1,7 @@
+work_path: '/data/DiffusionDet/' 
+gpu_id: '0,1,2,3'
+config_file: 'alicetest.diffdet.yaml'
+screen_name: 'alice_test'
+pretrained_model: 'test_voc_split1_pre_model.pth'
+n_times_iter: 4 # 设置默认迭代次数的倍率
+threshold: 0.4 # 设置默认阈值

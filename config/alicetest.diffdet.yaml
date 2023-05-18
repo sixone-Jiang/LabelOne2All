@@ -1,0 +1,27 @@
+DATASETS:
+  TRAIN: ("newdata_train",)
+INPUT:
+  CROP:
+    ENABLED: true
+  FORMAT: RGB
+MODEL:
+  BACKBONE:
+    NAME: build_swintransformer_fpn_backbone
+  DiffusionDet:
+    NUM_CLASSES: 5
+    NUM_PROPOSALS: 800
+  FPN:
+    IN_FEATURES:
+    - swin0
+    - swin1
+    - swin2
+    - swin3
+  SWIN:
+    SIZE: B-22k
+  WEIGHTS: models/swin_base_patch4_window7_224_22k.pkl
+SOLVER:
+  IMS_PER_BATCH: 4
+  MAX_ITER: 200
+  STEPS: (8000,10000)
+  WARMUP_ITERS: 100
+_BASE_: Base-DiffusionDet.yaml

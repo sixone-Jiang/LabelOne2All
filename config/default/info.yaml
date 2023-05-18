@@ -1,0 +1,12 @@
+CONNCECTOR:
+  name: "Connector"
+  description: "Connector"
+  version: "1.0.0"
+  data: '59.99.99.99:23@root#C:\\Users\\huip\\.ssh\\id_rsa'
+
+
+SAVE:
+  name: "Save"
+  description: "Save"
+  version: "1.0.0"
+  data: ['59.99.99.99:22@root#C:\\Users\\huip\\.ssh\\id_rsa']
